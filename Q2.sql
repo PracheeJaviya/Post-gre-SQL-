@@ -17,7 +17,9 @@ exit when number=0;
 end loop;
 z:= power(y,3);
 if  z = n then
- raise notice '% is dudney number', number;
+ raise notice '% is dudney number', n;
+else
+ raise notice '% is not a dudney number',n;
 end if;
 end;
 $$ Language plpgsql;
