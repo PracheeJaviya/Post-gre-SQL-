@@ -17,7 +17,7 @@ select middle_name into middle_n from person where person_id = i;
 select last_name into last_n from person where person_id = i;
 select gender into gend from person where person_id = i;
 
-
+raise notice 'Age = %', age;
 if (gend = '{F}' and age>12) then
 Raise notice 'Ms. % % %', first_n,middle_n,last_n; end if;
 if (gend = '{F}' and age<=12) then
