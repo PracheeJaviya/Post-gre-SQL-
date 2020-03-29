@@ -1,10 +1,16 @@
-create or replace function details(names text) returns table(emp_id text, name1 text, position text,registered boolean) as
+create or replace function details(names text)
+returns void as
 $$
 declare
-det nurse;
-
+a text;
+b text;
+c text;
+d boolean;
 begin
-    select * into det from nurse where names = name1;
-    return det;
+select * into a,b,c,d from nurse where names=name1;
+raise notice 'Employee id %',a;
+raise notice 'Employee name %',b;
+raise notice 'Employee position %',c;
+raise notice 'Employee registration %',d;
 end
 $$language plpgsql;
