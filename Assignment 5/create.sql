@@ -4,7 +4,7 @@ create table
 if not exists nurse
 (
     emp_id text,
-    name text,
+    name1 text,
     position text,
     registered boolean
 );
@@ -13,8 +13,7 @@ create table
 if not exists physician
 (
     phy_id text,
-    emp_id text,
-    name text,
+    phy_name text,
     position text
 );
 
@@ -42,9 +41,9 @@ if not exists appointment
 create table
 if not exists room
 (
-    mo text primary key,
-    type text,
-    floor int,
+    rno text primary key,
+    type1 text,
+    floor1 int,
     availability boolean
 );
 
