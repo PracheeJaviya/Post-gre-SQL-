@@ -3,6 +3,6 @@ $$
 declare
 begin
 delete from appointment where ap_id=id;
-raise 'RECORD DELETED';
+raise notice 'RECORD % DELETED',id;
 end;
 $$language plpgsql;

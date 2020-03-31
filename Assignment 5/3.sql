@@ -1,4 +1,4 @@
-create or replace function edpt_det(id text)
+create or replace function dept_det(id text)
 returns void as
 $$
 declare

@@ -5,7 +5,7 @@ declare
 a text;
 b text;
 c integer;
-d boolean
+d boolean;
 begin
 select * into a,b,c,d from room where rno=roomn;
 raise notice 'Room number %',a;
