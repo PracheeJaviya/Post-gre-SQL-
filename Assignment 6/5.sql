@@ -1,0 +1,1 @@
+-- Create a trigger which will update Room no. in Appointment table is Room no. is updated in Room table.

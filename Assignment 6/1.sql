@@ -1,11 +1,11 @@
-create or replace function trigapp() returns trigger as
-$$
-declare
-time time;
-begin
-    if new.time == 0 then
-    insert into appointment(time) values('10:00:00');
-     end if;
-    return new;
-end
-$$language plpgsql;
+CREATE OR REPLACE FUNCTION q1() RETURNS TRIGGER AS $q1$
+BEGIN
+    IF NEW.time IS NULL THEN
+        NEW.time = '10:00:00';
+    END IF;
+    RETURN NEW;
+END;
+$q1$ LANGUAGE plpgsql;
+
+CREATE TRIGGER q1 BEFORE INSERT ON appointment
+    FOR EACH ROW EXECUTE FUNCTION q1();
